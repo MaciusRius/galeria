@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de fotos</title>
+</head>
+<style>
+
+    main {
+        display: flex;
+        padding: 10px;
+    }
+    .lateral1, .lateral2, .lateral3, .lateral4 {
+        width: 350px;
+    }
+        
+
+</style>
+<body>
+   <main>
+    <section>
+        <article class="lateral" id="bambaA"><img src="/img/sneaker_350_A.jpg" alt="bambas neaker 350  frontal"></article>
+        <article class="lateral2" id="bambaB"><img src="/img/sneaker_350_B.jpg" alt="bambas neaker 350  frontal"></article>
+        <article class="lateral3" id="bambaC"><img src="/img/sneaker_350_C.jpg" alt="bambas neaker 350  frontal"></article>
+        <article class="lateral4" id="bambaD"><img src="/img/sneaker_350_D.jpg" alt="bambas neaker 350  frontal"></article>
+    </section>
+    <section>
+        <article class="foto gran" ><img src="/img/sneaker_1200_A.jpg" alt="bambas neaker 350  frontal" id="container"></article>
+    </section>
+</main>
+<script>
+    
+        let lateralA = document.getElementById("bambaA"); //seleccionem/declarem id de l'article A
+        let lateralB = document.getElementById("bambaB"); //seleccionem id dels article B
+        let lateralC = document.getElementById("bambaC");
+        let lateralD = document.getElementById("bambaD");
+        let imatgeGran = document.getElementById("container");// declarada la ciaxa genèrica fotos grans amb la id container
+        
+        //funcio de la primera imatge lateral
+        function ferFotoGranA() {
+           imatgeGran.setAttribute("src","img/sneaker_1200_A.jpg"); //funcio del canvi de fotos
+
+        }
+
+        lateralA.addEventListener("mouseover", ferFotoGranA); //cridem les funcions el passar ratoli per sobre
+
+        //foto B
+
+        function ferFotoGranB() {
+           imatgeGran.setAttribute("src","img/sneaker_1200_B.jpg")
+        }
+
+        lateralB.addEventListener("mouseover", ferFotoGranB); 
+
+        //foto c
+
+        function ferFotoGranC() {
+           imatgeGran.setAttribute("src","img/sneaker_1200_C.jpg")
+        }
+        lateralC.addEventListener("mouseover", ferFotoGranC); 
+        
+         //foto D
+
+         function ferFotoGranD() {
+           imatgeGran.setAttribute("src","img/sneaker_1200_D.jpg")
+        }
+        lateralC.addEventListener("mouseover", ferFotoGranD); 
+
+    </script>
+</body>
+</html>
